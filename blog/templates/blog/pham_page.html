@@ -1,0 +1,48 @@
+{% extends 'blog/base_back.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div id="appCapsule">
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <button type="button" class="btn btn-primary btn-lg btn-block square">약튜버</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-primary btn-lg btn-block square">게시글</button>
+            </div>
+        </div>
+
+        <div class="section full mt-3 mb-3">
+            <div id="search-page" class="show">
+                <form class="search-form">
+                    <div class="form-group searchbox">
+                        <input type="text" class="form-control" placeholder="약국이름 또는 약사이름 검색">
+                        <i class="input-icon">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </i>
+                        <a href="javascript:;" class="ml-1 close toggle-searchbox">
+                            <ion-icon name="close-circle"></ion-icon>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="section mt-2">
+            <div class="card">
+                <div class="card-header">
+                    이건약국
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">영상</h5>
+                </div>
+                <div class="card-footer">
+                    좋아요 댓글
+                </div>
+            </div>
+        </div>
+        
+    </div>
+{% endblock %}

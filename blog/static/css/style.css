@@ -9,7 +9,7 @@ body {
   line-height: 1.55rem;
   letter-spacing: -0.015rem;
   color: #4F5050;
-  background: #F9F9F9;
+  background: #FF0000;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -46,7 +46,7 @@ button:hover, button:active, button:focus {
 }
 
 .appHeader {
-  min-height: 56px;
+  min-height: 68px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +94,7 @@ button:hover, button:active, button:focus {
 .appHeader .left ion-icon,
 .appHeader .right i.icon,
 .appHeader .right ion-icon {
-  font-size: 26px;
+  font-size: 35px;
   --ionicon-stroke-width: 36px;
 }
 
@@ -106,7 +106,7 @@ button:hover, button:active, button:focus {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  color: #141515;
+  color: #fff;
   position: relative;
 }
 
@@ -134,7 +134,7 @@ button:hover, button:active, button:focus {
 }
 
 .appHeader .pageTitle {
-  font-size: 17px;
+  font-size: 35px;
   font-weight: 500;
   padding: 0 10px;
 }
@@ -340,7 +340,7 @@ button:hover, button:active, button:focus {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #FFFFFF;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -400,7 +400,7 @@ button:hover, button:active, button:focus {
   margin: 1px auto 3px auto;
   font-size: 26px;
   line-height: 1em;
-  color: #141515;
+  color: #fff;
   transition: 0.1s all;
   display: block;
   margin-top: 1px;
@@ -453,14 +453,14 @@ button:hover, button:active, button:focus {
 .appBottomMenu .item.active i.icon,
 .appBottomMenu .item.active ion-icon,
 .appBottomMenu .item.active strong {
-  color: #1E74FD !important;
+  color: #FF0000 !important;
   font-weight: 500;
 }
 
 .appBottomMenu .item:hover i.icon,
 .appBottomMenu .item:hover ion-icon,
 .appBottomMenu .item:hover strong {
-  color: #141515;
+  color: #FF0000;
 }
 
 .appBottomMenu.text-light {
@@ -588,7 +588,7 @@ button:hover, button:active, button:focus {
   display: flex;
   align-items: center;
   position: relative;
-  background: #1E74FD;
+  background: #FF0000;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
   position: fixed;
   z-index: 100;
@@ -2109,6 +2109,12 @@ a.badge-dark {
   padding: 0;
 }
 
+.btn-icon-full {
+  width: 100%;
+  height: 40px;
+  padding: 0;
+}
+
 .btn-icon i.icon,
 .btn-icon ion-icon {
   text-align: center;
@@ -3457,7 +3463,7 @@ a.badge-dark {
 }
 
 .bg-primary {
-  background: #1E74FD !important;
+  background: #000 !important;
   color: #FFF;
 }
 
@@ -4850,7 +4856,7 @@ textarea,
   opacity: 1;
   color: #A1A1A2;
   width: 46px;
-  height: 56px;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4887,8 +4893,27 @@ textarea,
   transition: 0.2s all ease-in-out;
 }
 
+#search-page {
+  display: block;
+  padding: 0;
+  background: #fff;
+  border-bottom: 1px solid #FFF;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  left: 0;
+  top: -50%;
+  right: 0;
+  width: 100%;
+  z-index: 1001;
+  transition: 0.2s all ease-in-out;
+}
+
 #search.show {
   top: env(safe-area-inset-top);
+  transition: 0.3s all;
+}
+
+#search-page.show {
+  top: 12%;
   transition: 0.3s all;
 }
 
@@ -4896,7 +4921,19 @@ textarea,
   box-shadow: none !important;
   border: 0 !important;
   border-radius: 0;
-  height: 56px;
+  height: 68px;
+  padding: 0 56px 0 56px;
+  background: transparent;
+  font-size: 17px;
+  color: #141515;
+  width: 100%;
+}
+
+#search-page .searchbox .form-control {
+  box-shadow: none !important;
+  border: 0 !important;
+  border-radius: 0;
+  height: 68px;
   padding: 0 56px 0 56px;
   background: transparent;
   font-size: 17px;
@@ -4908,7 +4945,15 @@ textarea,
   border-color: #bbbbbb;
 }
 
+#search-page .searchbox .form-control:focus {
+  border-color: #bbbbbb;
+}
+
 #search .searchbox .form-control:focus ~ .input-icon {
+  color: #141515;
+}
+
+#search-page .searchbox .form-control:focus ~ .input-icon {
   color: #141515;
 }
 
@@ -4917,7 +4962,20 @@ textarea,
   position: absolute;
   left: 8px;
   width: 46px;
-  height: 56px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A1A1A2;
+  top: 0;
+}
+
+#search-page .searchbox .input-icon {
+  font-size: 26px;
+  position: absolute;
+  left: 8px;
+  width: 46px;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7241,4 +7299,38 @@ body.dark-mode-active .profile-stats .item {
 
 body.dark-mode-active .profile-stats .item strong {
   color: #FFFFFF;
+}
+
+/* Style the navigation menu */
+.navbar {
+  width: 100%;
+  background-color: #FF0000;
+  overflow: auto;
+  padding:2% 10% 2% 10%;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center; /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+/* Style the current/active link */
+.navbar a.active {
+  border-bottom: 3px solid #fff;
+}
+
+.index-recommend {
+  background-color: #FFF;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }

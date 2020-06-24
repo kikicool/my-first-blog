@@ -1,0 +1,79 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div id="appCapsule">
+        <!-- 메인메뉴 -->
+        <div class="navbar">
+            <a class="active" href="#">전체</a>
+            <a href="#">오메가</a>
+            <a href="#">크릴</a>
+            <a href="#">루테인</a>
+            <a href="#">실리마린</a>
+            <a href="#">글루코사민</a>
+            <a href="#">칼슘</a>
+        </div>
+
+        <div class="index-recommend">
+            <div class="header-large-title">
+            <h1 class="title">나를 위한 추천 제품</h1>
+            <!-- <h4 class="subtitle">Welcome to Mobilekit</h4> -->
+            </div>
+
+            <div class="section full mt-3 mb-3">
+                <div class="carousel-multiple owl-carousel owl-theme">
+
+                <div class="item">
+                    <div class="card">
+                        <img src="{% static 'img/sample/photo/d1.jpg' %}" class="card-img-top" alt="image">
+                        <div class="card-body pt-2">
+                            <h4 class="mb-0">상품1 </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="{% static 'img/sample/photo/d2.jpg' %}" class="card-img-top" alt="image">
+                        <div class="card-body pt-2">
+                            <h4 class="mb-0">상품 2</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="{% static 'img/sample/photo/d3.jpg' %}" class="card-img-top" alt="image">
+                        <div class="card-body pt-2">
+                            <h4 class="mb-0">상품 3</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="{% static 'img/sample/photo/d4.jpg' %}" class="card-img-top" alt="image">
+                        <div class="card-body pt-2">
+                            <h4 class="mb-0">상품 4</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="{% static 'img/sample/photo/d5.jpg' %}" class="card-img-top" alt="image">
+                        <div class="card-body pt-2">
+                            <h4 class="mb-0">상품 5</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="{% static 'img/sample/photo/d6.jpg' %}" class="card-img-top" alt="image">
+                        <div class="card-body pt-2">
+                            <h4 class="mb-0">상품 6</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

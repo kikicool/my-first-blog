@@ -1,0 +1,80 @@
+{% extends 'blog/base_back.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div id="appCapsule">
+        <div class="section full mt-3 mb-3">
+            <div id="search-page" class="show">
+                <form class="search-form">
+                    <div class="form-group searchbox">
+                        <input type="text" class="form-control" placeholder="약국이름 또는 약사이름 검색">
+                        <i class="input-icon">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </i>
+                        <a href="javascript:;" class="ml-1 close toggle-searchbox">
+                            <ion-icon name="close-circle"></ion-icon>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-3 mb-3">
+            <button type="button" class="btn btn-primary btn-lg btn-block square">서울</button>
+        </div>
+
+        <div class="mt-3 mb-3">
+            <ul class="listview image-listview media mb-2">
+                <li>
+                    <a href="#" class="item">
+                        <div class="imageWrapper">
+                            <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w64">
+                        </div>
+                        <div class="in">
+                            <div>
+                                대박약국 / 고승일
+                            </div>
+                            <span class="text-muted">바로가기</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mt-3 mb-3">
+            <ul class="listview image-listview media mb-2">
+                <li>
+                    <a href="#" class="item">
+                        <div class="imageWrapper">
+                            <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w64">
+                        </div>
+                        <div class="in">
+                            <div>
+                                대박약국 / 고승일
+                            </div>
+                            <span class="text-muted">바로가기</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mt-3 mb-3">
+            <ul class="listview image-listview media mb-2">
+                <li>
+                    <a href="#" class="item">
+                        <div class="imageWrapper">
+                            <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w64">
+                        </div>
+                        <div class="in">
+                            <div>
+                                대박약국 / 고승일
+                            </div>
+                            <span class="text-muted">바로가기</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

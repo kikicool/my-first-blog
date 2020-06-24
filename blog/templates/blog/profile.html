@@ -1,0 +1,55 @@
+{% extends 'blog/base_back.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div id="appCapsule">
+
+    <div class="section mt-2 mb-2">
+        <div class="card comment-box">
+            <img src="{% static 'img/sample/avatar/avatar1.jpg' %}" alt="avatar" class="imaged w64 rounded">
+            <h4 class="card-title">고승일 약사</h4>
+            <div class="card-text">Sep 23, 2020</div>
+            <div class="text">
+                코로나 바이러스 예방법으로 흐르는 물에 30초이상 손씻기
+            </div>
+        </div>
+    </div>
+
+    <div class="section full mb-2">
+        <div class="mt-2 pr-2 pl-2">
+            <div class="row">
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+                <div class="col-4 mb-2">
+                    <img src="{% static 'img/sample/photo/1.jpg' %}" alt="image" class="imaged w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

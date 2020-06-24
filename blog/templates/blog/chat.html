@@ -1,0 +1,80 @@
+{% extends 'blog/base_back.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div id="appCapsule">
+        <div class="mt-3 mb-3">
+            <div class="card bg-warning comment-box">
+                <img src="{% static 'img/sample/avatar/avatar1.jpg' %}" alt="avatar" class="imaged w64 rounded">
+                <h4 class="card-title">고승일 약사</h4>
+                <div class="card-text">Sep 23, 2020</div>
+                <div class="text">
+                    코로나 바이러스 예방법으로 흐르는 물에 30초이상 손씻기
+                </div>
+            </div>
+        </div>
+        <div class="section full mt-2">
+            <div class="wide-block pt-2 pb-1">
+                <div class="row"><h2>이건약국</h2></div>
+                <div class="row"><h2>상담시간</h2></div>
+                <div class="row">
+                    <div class="col-6 text-justify">
+                         평 일:
+                    </div>
+                    <div class="col-6">
+                        09:00 ~ 20:00
+                   </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                         토요일:
+                    </div>
+                    <div class="col-6">
+                        09:00 ~ 20:00
+                   </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                         일요일:
+                    </div>
+                    <div class="col-6">
+                        09:00 ~ 20:00
+                   </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                         긴급:
+                    </div>
+                    <div class="col-6">
+                        20:00 이후 알림서비스
+                   </div>
+                </div>
+                <div class="divider bg-dark mt-2 mb-2"></div>
+                <div class="row"><h2>최근 상담내용</h2></div>
+                <div class="row">
+                    <div class="col-6 text-justify">
+                         약 복용에 대해서 상담하였음
+                    </div>
+                    <div class="col-6">
+                        2020.03.15. 20:20
+                   </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-justify">
+                        복통이 심해서 긴급으로 상담
+                   </div>
+                   <div class="col-6">
+                       2020.03.11. 20:20
+                  </div>
+                </div>
+                <div class="divider bg-dark mt-2 mb-2"></div>
+            </div>             
+        </div>
+        <button type="button" class="btn btn-icon-full btn-success btn-block mt-3 mb-3">
+            <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated" aria-label="call outline"></ion-icon>
+            약사님과 상담하기
+        </button>
+    </div>
+{% endblock %}
