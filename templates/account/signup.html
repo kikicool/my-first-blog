@@ -1,38 +1,71 @@
 {% extends 'blog/base_clean.html' %}
 
+{% load static %}
+{% load widget_tweaks %}
 {% load i18n %}
 {% load account socialaccount %}
 
 {% block content %}
-<div class="jumbotron jumbotronfluid">
+<div id="appCapsule">
 
-  <div class="container my-5">
-
-    <h3 class="my-3">Sign Up</h3>
-
-    <hr>
-
-    <form method="post">
-      {% csrf_token %}
-
-      <div class="form-group row">
-        <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
-        <div class="col-sm-10 mt-1">
-          {{ form.email }}
-        </div>
+  <div class="login-form">
+      <div class="section">
+          <h1>회원가입</h1>
       </div>
-      <div class="form-group row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10 mt-1">
-          {{ form.password1 }}
-        </div>
+      <div class="section mt-2 mb-5">
+          <form method="post">
+            {% csrf_token %}
+              <!-- <div class="form-group boxed">
+                  <div class="input-wrapper">
+                      <input type="email" class="form-control" id="name1" placeholder="Full name">
+                      <i class="clear-input">
+                          <ion-icon name="close-circle" role="img" class="md hydrated" aria-label="close circle"></ion-icon>
+                      </i>
+                  </div>
+              </div> -->
+
+              <div class="form-group boxed">
+                  <div class="input-wrapper">
+                      {{ form.email|add_class:'form-control' }}
+                      <i class="clear-input">
+                          <ion-icon name="close-circle" role="img" class="md hydrated" aria-label="close circle"></ion-icon>
+                      </i>
+                  </div>
+              </div>
+
+              <div class="form-group boxed">
+                  <div class="input-wrapper">
+                    {{ form.password1|add_class:'form-control' }}
+                    <i class="clear-input">
+                          <ion-icon name="close-circle" role="img" class="md hydrated" aria-label="close circle"></ion-icon>
+                      </i>
+                  </div>
+              </div>
+
+              <div class="form-group boxed">
+                  <div class="input-wrapper">
+                    {{ form.password2|add_class:'form-control' }}
+                      <i class="clear-input">
+                          <ion-icon name="close-circle" role="img" class="md hydrated" aria-label="close circle"></ion-icon>
+                      </i>
+                  </div>
+              </div>
+
+              <div class=" mt-1 text-left">
+                  <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customChecka1">
+                      <label class="custom-control-label text-muted" for="customChecka1">약관에 동의합니다. <a href="javascript:;">약관보기</a></label>
+                  </div>
+
+              </div>
+
+              <div class="form-button-group">
+                  <button type="submit" class="btn btn-primary btn-block btn-lg">가입하기</button>
+              </div>
+
+          </form>
       </div>
-
-      <button class="btn btn-info mt-3" type="submit"> Sign Up </button>
-    </form>
-
   </div>
-
 </div>
 
 {% endblock %}

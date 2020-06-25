@@ -1,58 +1,60 @@
 {% extends 'blog/base_clean.html' %}
 
+{% load static %}
+{% load widget_tweaks %}
 {% load i18n %}
 {% load account socialaccount %}
 
 {% block content %}
+<div id="appCapsule" class="pt-0">
 
-<!-- <div class="jumbotron jumbotronfluid">
-
-  <div class="container my-5">
-
-    <h3 class="my-3">Login</h3>
-
-    <hr>
-
-    {% if form.errors %}
-    <p style="color:red;">아이디, 비밀번호가 일치하지 않습니다. 다시 시도해주세요.</p>
-    {% endif %}
-
-    {% if next %}
-    {% if user.is_authenticated %}
-    <p> 페이지에 대한 접근 권한이 없습니다. 접근 권한을 가진 계정으로 로그인해주세요.</p>
-    {% else %}
-    <p>페이지를 보시려면 로그인을 해주세요.</p>
-    {% endif %}
-    {% endif %}
-
-    <form method="post">
-      {% csrf_token %}
-
-
-      <div class="form-group row">
-        <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
-        <div class="col-sm-10 mt-1">
-          {{ form.login }}
-        </div>
+  <div class="login-form mt-1">
+      <div class="section">
+          <img src="{% static 'img/sample/photo/vector4.png' %}" alt="image" class="form-image">
       </div>
-      <div class="form-group row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10 mt-1">
-          {{ form.password }}
-        </div>
+      <div class="section mt-1">
+          <h1>EGUN 24</h1>
+          <h4>약국 통합 솔루션</h4>
       </div>
+      <form class="login" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+      <div class="section mt-1 mb-5">
+          <form action="app-pages.html">
+              <div class="form-group boxed">
+                  <div class="input-wrapper">
+                    {{ form.login|add_class:'form-control' }}
+                      <i class="clear-input">
+                          <ion-icon name="close-circle" role="img" class="md hydrated" aria-label="close circle"></ion-icon>
+                      </i>
+                  </div>
+              </div>
 
-      <button class="btn btn-info mt-3" type="submit"> Sign in </button>
-      <input type="hidden" name="next" value="{{ next }}">
-    </form>
+              <div class="form-group boxed">
+                  <div class="input-wrapper">
+                    {{ form.password|add_class:'form-control' }}
+                    <i class="clear-input">
+                          <ion-icon name="close-circle" role="img" class="md hydrated" aria-label="close circle"></ion-icon>
+                      </i>
+                  </div>
+              </div>
 
-    <p class="mt-2"><a href="{% url 'account_reset_password' %}">비밀번호를 잊으셨나요?</a></p>
-    <p class="mt-2"><a href="{% url 'account_signup' %}">회원가입</a></p>
+              <div class="form-links mt-2">
+                  <div>
+                      <a href="{{ signup_url }}">가입하기</a>
+                  </div>
+                  <div><a href="{% url 'account_reset_password' %}" class="text-muted">비밀번호 찾기</a></div>
+              </div>
 
+              <div class="form-button-group">
+                  <button type="submit" class="btn btn-primary btn-block btn-lg">로그인하기</button>
+              </div>
+          </form>
+      </div>
   </div>
 
-</div> -->
-<h1>{% trans "Sign In" %}</h1>
+</div>
+
+<!-- <h1>{% trans "Sign In" %}</h1>
 
 {% get_providers as socialaccount_providers %}
 
@@ -86,5 +88,5 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% endif %}
   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form>
+</form> -->
 {% endblock %}
