@@ -2,11 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-# GENDER_CHOICES= [
-#     ('Male', '남자'),
-#     ('Female', '여자'),
-# ]
-
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=30)

@@ -1,0 +1,17 @@
+{% extends 'blog/base_clean.html' %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block content %}
+<div class="container">
+
+  <h2>Sign Up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+  </form>
+
+</div>
+{% endblock %}

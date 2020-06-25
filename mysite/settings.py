@@ -49,11 +49,8 @@ INSTALLED_APPS = [
     #소셜로그인을 할 제공자 리스트를 아래에 포함 
     # 'allauth.socialaccount.providers.naver'
 
-    'users',
     'blog',
 ]
-
-AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,7 +74,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,6 +106,10 @@ ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_LOGOUT_ON_GET = True
+
+# emaillogin_project/settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
@@ -146,7 +147,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ko'
 
 TIME_ZONE = 'America/New_York'
 USE_I18N = True
